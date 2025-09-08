@@ -36,7 +36,15 @@
       }
 
       .item a:hover {
-        color: red; /
+        color: red; 
+      }
+
+      footer {
+        text-align: right;
+        font-style: italic;
+        font-family: monospace;
+        margin-top: 20px;
+        padding-right: 20px;
       }
     </style>
   </head>
@@ -54,5 +62,14 @@
         <a href="https://www.it.kmitl.ac.th/en" target="_blank">Link</a>
       </div>
     </div>
+
+    <footer>
+      © _maethawat_ <span id="year"></span>
+    </footer>
+
+    <script>
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
