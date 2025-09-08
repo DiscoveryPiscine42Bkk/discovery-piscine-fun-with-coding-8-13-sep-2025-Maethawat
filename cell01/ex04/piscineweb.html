@@ -2,23 +2,56 @@
 <html>
   <head>
     <title>Basics</title>
-  </head>
-  <body>
     <style>
-      body{
+      body {
         background-color: pink;
       }
-    </style>
-    <h1 style="text-align:center; font-size:3em;">-so bigger-#</h1>
-    <div style="display: flex; justify-content: center;">
-    <div>
-        <a href="https://www.instagram.com/_maethawat_/" target="_blank">
-          <img src="Mickey.jpg" alt="Mickey" width="400" height="600">
-        </a>
 
-        <a href="https://www.it.kmitl.ac.th/en" target="_blank">
-          <img src="1755841207059.jpg" alt="IT" width="400" height="600">
-        </a>
+      h1 {
+        text-align: center;
+        font-size: 3em;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 50px; 
+      }
+
+      .item {
+        text-align: center; 
+      }
+
+      .item img {
+        width: 400px;
+        height: 500px;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .item a {
+        text-decoration: none;
+        font-size: 1.2em;
+        color: blue;
+      }
+
+      .item a:hover {
+        color: red; /
+      }
+    </style>
+  </head>
+  <body>
+    <h1>-so bigger-#</h1>
+
+    <div class="container">
+      <div class="item">
+        <img src="Mickey.jpg" alt="Mickey">
+        <a href="https://www.instagram.com/_maethawat_/" target="_blank">Link</a>
+      </div>
+
+      <div class="item">
+        <img src="1755841207059.jpg" alt="IT">
+        <a href="https://www.it.kmitl.ac.th/en" target="_blank">Link</a>
       </div>
     </div>
   </body>
