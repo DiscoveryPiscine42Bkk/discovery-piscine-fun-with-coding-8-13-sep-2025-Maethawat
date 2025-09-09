@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explode Balloon</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  #balloon {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="balloon"></div>
+
+<script>
+const balloon = document.getElementById('balloon');
+
+let size = 200; 
+const maxSize = 420;
+const minSize = 200;
+const growth = 10;
+const shrink = 5;
+const colors = ['red', 'green', 'blue'];
+let colorIndex = 0;
+
+balloon.addEventListener('click', () => {
+    size += growth;
+    if (size > maxSize) {
+        size = minSize;
+    }
+    balloon.style.width = size + 'px';
+    balloon.style.height = size + 'px';
+
+    colorIndex = (colorIndex + 1) % colors.length;
+    balloon.style.backgroundColor = colors[colorIndex];
+});
+
+balloon.addEventListener('mouseenter', () => {
+    size -= shrink;
+    if (size < minSize) size = minSize;
+    balloon.style.width = size + 'px';
+    balloon.style.height = size + 'px';
+});
+
+balloon.addEventListener('mouseleave', () => {
+    size -= shrink;
+    if (size < minSize) size = minSize;
+    balloon.style.width = size + 'px';
+    balloon.style.height = size + 'px';
+});
+</script>
+
+</body>
+</html>
