@@ -1,0 +1,47 @@
+/* Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Parallax sections */
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* เต็มหน้าจอ */
+}
+
+/* Example images (คุณเปลี่ยน URL ได้ตามต้องการ) */
+.img1 {
+    background-image: url("https://vcdn1-english.vnecdn.net/2025/04/28/491439547-18382396981137783-47-9649-6094-1745831267.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=NfoR79N0WNXklyTsudK3XQ");
+}
+
+.img2 {
+    background-image: url("https://fifpro.org/media/5chb3dva/lionel-messi_imago1019567000h.jpg?rxy=0.32986930611281567,0.18704579979466449&rnd=133378758718600000");
+}
+
+/* Caption text in center */
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 2em;
+}
+
+/* Black text block */
+.text-block {
+    background-color: black;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
