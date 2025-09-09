@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 02: Calculator</title>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    <form id="calcForm">
+        <input type="number" id="left" placeholder="Left number" min="0">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="number" id="right" placeholder="Right number" min="0">
+        <input type="submit" value="Try me!">
+    </form>
+
+    <script>
+        const form = document.getElementById('calcForm');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const left = parseInt(document.getElementById('left').value);
+            const right = parseInt(document.getElementById('right').value);
+            const operator = document.getElementById('operator').value;
+
+            //ไว้เช็คว่า input เป็นตัวเลขบวกมั้ย
+            if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+                alert('Error :(');
+                return;
+            }
+            //ไว้เช็คว่า หาร 0 ลงตัวมั้ย
+            if ((operator === '/' || operator === '%') && right === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            let result;
+            switch(operator) {
+                case '+': result = left + right; break;
+                case '-': result = left - right; break;
+                case '*': result = left * right; break;
+                case '/': result = left / right; break;
+                case '%': result = left % right; break;
+            }
+
+            alert('Result: ' + result);
+            console.log('Result:', result);
+        });
+        //ไว้หาร  30
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+</body>
+</html>
